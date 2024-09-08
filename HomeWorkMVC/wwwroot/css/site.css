@@ -1,7 +1,21 @@
 * {
     margin: 0;
-    padding: 0;
+    padding: 5;
 }
 body{
     background: orange;
+    color: #b6ff00;
+}
+header{
+    color: #00ffff;
+}
+
+footer{
+    height: 30px;
+    width: 100%;
+    background-color: aquamarine;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    color: #ff0000;
 }
