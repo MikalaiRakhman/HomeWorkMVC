@@ -1,21 +1,37 @@
 * {
     margin: 0;
-    padding: 5;
+    padding: 0;
 }
-body{
-    background: orange;
-    color: #b6ff00;
-}
-header{
-    color: #00ffff;
+body {
+    background: #d8dee1;
+    color: #25292f;
 }
 
-footer{
+a {
+    color: #cebb4a;
+}
+
+.logo{
+    font-size: 30px;
+}
+
+header {
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    color: #cebb4a;
+    background-color: #25292f;
+}
+
+footer {
     height: 30px;
     width: 100%;
-    background-color: aquamarine;
-    position:absolute;
+    background-color: #25292f;
+    position: absolute;
     bottom: 0;
     left: 0;
-    color: #ff0000;
+    color: #cebb4a;
 }
