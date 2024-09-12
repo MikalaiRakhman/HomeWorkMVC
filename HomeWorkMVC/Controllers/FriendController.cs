@@ -14,7 +14,7 @@ namespace HomeWorkMVC.Controllers
 	        return View();
         }
 
-        public IActionResult Update()
+        public IActionResult Edit()
         {
 	        return View();
         }

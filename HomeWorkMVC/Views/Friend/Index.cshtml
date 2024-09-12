@@ -1,5 +1,13 @@
-﻿@{
+﻿@model Friend
+@{
 	ViewData["Title"] = "Friend";
 }
 
 <h1>Friends</h1>
+
+<nav>
+	<a href="@Url.Action("Create", "Friend")">Create Friend</a>
+	<a href="@Url.Action("Delete", "Friend")">Delete Friend</a>
+	<a href="@Url.Action("Edit", "Friend")">Edit Friend</a>
+</nav>
+
