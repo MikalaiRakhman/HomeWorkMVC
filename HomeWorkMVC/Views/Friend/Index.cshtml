@@ -1,4 +1,5 @@
-﻿@model Friend
+﻿@using System.Security.Cryptography
+@model Friend
 @{
 	ViewData["Title"] = "Friend";
 }
@@ -10,4 +11,5 @@
 	<a href="@Url.Action("Delete", "Friend")">Delete Friend</a>
 	<a href="@Url.Action("Edit", "Friend")">Edit Friend</a>
 </nav>
+
 
