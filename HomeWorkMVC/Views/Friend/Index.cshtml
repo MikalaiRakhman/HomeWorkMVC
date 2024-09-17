@@ -1,5 +1,4 @@
-﻿@using System.Security.Cryptography
-@model Friend
+﻿@model List<Friend>
 @{
 	ViewData["Title"] = "Friend";
 }
@@ -11,5 +10,29 @@
 	<a href="@Url.Action("Delete", "Friend")">Delete Friend</a>
 	<a href="@Url.Action("Edit", "Friend")">Edit Friend</a>
 </nav>
+
+<div class="table-responsive d-none d-md-block">
+    <table class="table table-hover table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Place</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var friend in Model)
+            {
+                <tr>
+                    <td>@friend.FriendID</td>
+                    <td>@friend.FriendName</td>
+                    <td>@friend.Place</td>                    
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
 
 

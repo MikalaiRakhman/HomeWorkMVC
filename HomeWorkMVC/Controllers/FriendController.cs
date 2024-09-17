@@ -1,16 +1,20 @@
 ﻿using HomeWorkMVC.Models;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 
 namespace HomeWorkMVC.Controllers
 {
     public class FriendController : Controller
     {
-	    private static List<Friend> _friends = new List<Friend>();
-	    
-	    public IActionResult Index() // /friends
+        public static List<Friend> _friends = new List<Friend>()
         {
-            return View();
+            new Friend{FriendID = 1, FriendName = "Vasia", Place = "Minsk"},
+            new Friend{FriendID = 2, FriendName = "Petia", Place = "Lida" },
+            new Friend{FriendID = 3, FriendName = "Katia", Place = "Warsaw" }
+        };
+	    
+	    public IActionResult Index() 
+        {
+            return View(_friends);
         }
 
         public IActionResult Create()
@@ -23,8 +27,9 @@ namespace HomeWorkMVC.Controllers
 	        if (ModelState.IsValid)
 	        {
                 _friends.Add(friend);
-	        }
-            return View();
+                return RedirectToAction("Index");
+            }
+            return View(friend);
         }
 
         public IActionResult Edit()
@@ -36,11 +41,5 @@ namespace HomeWorkMVC.Controllers
         {
             return View();
         }
-
-        public string Hello()
-        {
-	        return "Hello";
-        }
-
     }
 }
