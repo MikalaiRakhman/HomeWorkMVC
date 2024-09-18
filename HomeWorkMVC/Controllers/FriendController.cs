@@ -32,14 +32,20 @@ namespace HomeWorkMVC.Controllers
             return View(friend);
         }
 
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            var friend = _friends.FirstOrDefault(f => f.FriendID == id);
+            if (friend != null)
+            {
+                _friends.Remove(friend);
+            }
+            return RedirectToAction("Index");
+        }
+
         public IActionResult Edit()
         {
 	        return View();
-        }
-
-        public IActionResult Delete()
-        {
-            return View();
-        }
+        }        
     }
 }

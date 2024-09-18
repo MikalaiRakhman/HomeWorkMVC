@@ -27,7 +27,12 @@
                 <tr>
                     <td>@friend.FriendID</td>
                     <td>@friend.FriendName</td>
-                    <td>@friend.Place</td>                    
+                    <td>@friend.Place</td> 
+                    <td>
+                        <form asp-action="Delete" asp-route-id="@friend.FriendID" method="post">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
                 </tr>
             }
         </tbody>
